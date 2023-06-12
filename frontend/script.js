@@ -19,19 +19,26 @@ function consumirEndpoint() {
       var resultadoDiv = document.getElementById("resultado");
       resultadoDiv.innerHTML = "";
 
+      var table = document.createElement("table");
+      table.classList.add("centered");
+
       for (var key in data) {
         if (data.hasOwnProperty(key)) {
-          var label = document.createElement("label");
-          label.innerHTML = key + ": ";
-          resultadoDiv.appendChild(label);
+          var row = document.createElement("tr");
 
-          var value = document.createElement("span");
-          value.innerHTML = data[key];
-          resultadoDiv.appendChild(value);
+          var labelCell = document.createElement("td");
+          labelCell.textContent = key;
+          row.appendChild(labelCell);
 
-          resultadoDiv.appendChild(document.createElement("br"));
+          var valueCell = document.createElement("td");
+          valueCell.textContent = data[key];
+          row.appendChild(valueCell);
+
+          table.appendChild(row);
         }
       }
+
+      resultadoDiv.appendChild(table);
     })
     .catch(function(error) {
       console.log("Error:", error);
