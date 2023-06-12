@@ -1,21 +1,10 @@
-function consumirEndpoint() {
-  var codigo = document.getElementById("codigo").value;
+function consumirAPI() {
+  var codigoUsuario = document.getElementById("codigoUsuario").value;
+  var apiUrl = `http://backend:3000/api/usuarios/${codigoUsuario}`;
 
-  var fetchOptions = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    },
-    mode: 'cors',
-    cache: 'default'
-  };
-
-  fetch("https://200.105.154.18:5901/api/Alumnos/" + codigo, fetchOptions)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
       var resultadoDiv = document.getElementById("resultado");
       resultadoDiv.innerHTML = "";
 
@@ -33,8 +22,8 @@ function consumirEndpoint() {
         }
       }
     })
-    .catch(function(error) {
-      console.log("Error:", error);
+    .catch(error => {
+      console.log('Error:', error);
     });
 }
 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Viewer</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos JSON</h1>
+    <form method="POST" action="/">
+        <label for="id_input">Ingrese el ID del usuario:</label>
+        <input type="text" id="id_input" name="id_input" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if json_data %}
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>{{ json_data.id }}</td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>{{ json_data.nombre }}</td>
+        </tr>
+        <tr>
+            <td>Primer Registro</td>
+            <td>{{ json_data.primerRegistro }}</td>
+        </tr>
+        <tr>
+            <td>Correo Personal</td>
+            <td>{{ json_data.correoPersonal }}</td>
+        </tr>
+        <tr>
+            <td>Correo Udabol</td>
+            <td>{{ json_data.correoUdabol }}</td>
+        </tr>
+        <tr>
+            <td>Código</td>
+            <td>{{ json_data.codigo }}</td>
+        </tr>
+        <tr>
+            <td>Verificación</td>
+            <td>{{ json_data.verificacion }}</td>
+        </tr>
+        <tr>
+            <td>Estado</td>
+            <td>{{ json_data.isActive }}</td>
+        </tr>
+        <tr>
+            <td>Examen GIT</td>
+            <td>{{ json_data.ex_GIT_6PTS }}</td>
+        </tr>
+        <tr>
+            <td>Examen ADOO</td>
+            <td>{{ json_data.ex_ADOO_8PTS }}</td>
+        </tr>
+        <tr>
+            <td>Examen Scrum &amp; Trabajo en equipo</td>
+            <td>{{ json_data.ex_ScrumTra_41PTS }}</td>
+        </tr>
+        <tr>
+            <td>Examen SOLID</td>
+            <td>{{ json_data.ex_SOLID_8PTS }}</td>
+        </tr>
+        <tr>
+            <td>Examen 12 Factores de Aplicaciones Web</td>
+            <td>{{ json_data.ex_12FactApp_12PTS }}</td>
+        </tr>
+        <tr>
+            <td>Examen Docker</td>
+            <td>{{ json_data.ex_Docker_5PTS }}</td>
+        </tr>
+    </table>
+    {% endif %}
+</body>
+</html>
+

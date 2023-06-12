@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Viewer</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos JSON</h1>
+    <form method="POST" action="/">
+        <label for="id_input">Ingrese el ID del usuario:</label>
+        <input type="text" id="id_input" name="id_input" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if json_data %}
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>{{ json_data.id }}</td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>{{ json_data.nombre }}</td>
+        </tr>
+        <tr>
+            <td>Primer Registro</td>
+            <td>{{ json_data.primerRegistro }}</td>
+        </tr>
+        <!-- Resto de los campos -->
+    </table>
+    {% endif %}
+</body>
+</html>
+

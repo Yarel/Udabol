@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Viewer</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Libreta de Notas del estudiante</h1>
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>{{ json_data.id }}</td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>{{ json_data.nombre }}</td>
+        </tr>
+        <tr>
+            <td>Primer Registro</td>
+            <td>{{ json_data.primerRegistro }}</td>
+        </tr>
+        <tr>
+            <td>Correo Personal</td>
+            <td>{{ json_data.correoPersonal }}</td>
+        </tr>
+        <tr>
+            <td>Correo Udabol</td>
+            <td>{{ json_data.correoUdabol }}</td>
+        </tr>
+        <tr>
+            <td>Código</td>
+            <td>{{ json_data.codigo }}</td>
+        </tr>
+        <tr>
+            <td>Verificación</td>
+            <td>{{ json_data.verificacion }}</td>
+        </tr>
+        <tr>
+            <td>isActive</td>
+            <td>{{ json_data.isActive }}</td>
+        </tr>
+        <tr>
+            <td>ex_GIT_6PTS</td>
+            <td>{{ json_data.ex_GIT_6PTS }}</td>
+        </tr>
+        <tr>
+            <td>ex_ADOO_8PTS</td>
+            <td>{{ json_data.ex_ADOO_8PTS }}</td>
+        </tr>
+        <tr>
+            <td>ex_ScrumTra_41PTS</td>
+            <td>{{ json_data.ex_ScrumTra_41PTS }}</td>
+        </tr>
+        <tr>
+            <td>ex_SOLID_8PTS</td>
+            <td>{{ json_data.ex_SOLID_8PTS }}</td>
+        </tr>
+        <tr>
+            <td>ex_12FactApp_12PTS</td>
+            <td>{{ json_data.ex_12FactApp_12PTS }}</td>
+        </tr>
+        <tr>
+            <td>ex_Docker_5PTS</td>
+            <td>{{ json_data.ex_Docker_5PTS }}</td>
+        </tr>
+    </table>
+</body>
+</html>
+

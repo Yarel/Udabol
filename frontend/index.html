@@ -1,45 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Consulta de Alumnos</title>
-  <style>
-    /* Estilos básicos para la página */
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    input[type="text"] {
-      padding: 5px;
-      width: 200px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    #resultado {
-      margin-top: 20px;
-    }
-  </style>
+  <title>API Frontend</title>
 </head>
 <body>
-  <h1>Consulta de Alumnos</h1>
-
-  <label for="codigo">Ingrese el código de usuario:</label>
-  <br>
-  <input type="text" id="codigo" placeholder="Ingrese el código">
-  <br><br>
-  <button onclick="consumirEndpoint()">Consultar</button>
+  <h1>Consulta de Usuario</h1>
+  <label for="codigoUsuario">Código de Usuario:</label>
+  <input type="text" id="codigoUsuario" />
+  <button onclick="consumirAPI()">Consultar</button>
 
   <div id="resultado"></div>
 
